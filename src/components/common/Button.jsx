@@ -3,7 +3,7 @@ import clsx from "clsx";
 
 export default function Button({ children, className, to, ...props }) {
   const baseClasses =
-    "px-4 py-2 rounded-md font-semibold transition-colors text-white bg-blue-600 hover:bg-blue-700";
+    "flex items-center justify-center px-4 py-2 rounded-md font-semibold transition-colors text-white bg-blue-600 hover:bg-blue-700";
 
   if (to) {
     return (
