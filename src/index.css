@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   line-height: 1.5;
   font-weight: 400;
 
@@ -13,4 +14,37 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  /* background-color: #000; */
+  /* color: #fff; */
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  padding: 0.5rem 0;
+}
+
+.marquee-track {
+  display: inline-flex;
+  animation: animate-marquee 10s linear infinite;
+}
+
+.marquee-track::after {
+  content: attr(data-content);
+  display: inline-flex;
+  gap: 3rem;
+  margin-left: 3rem;
+}
+
+@keyframes animate-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }

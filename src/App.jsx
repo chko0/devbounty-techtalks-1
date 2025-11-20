@@ -1,10 +1,9 @@
-import { useState } from "react";
+import MarqueeBar from "./components/layout/MarqueeBar";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
+      <MarqueeBar />
       <div>Techtalks!</div>
     </>
   );
