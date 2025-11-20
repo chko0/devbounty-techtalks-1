@@ -11,11 +11,11 @@ export default function NavLink({
     <Link
       to={href}
       key={href}
-      className={`relative inline-flex items-center gap-1 font-semibold transition-colors ${
+      className={`relative inline-flex items-center gap-1 font-semibold transition-colors text-sm ${
         isActive ? "text-cyan-300" : "text-white hover:text-cyan-300"
       }`}
     >
-      {Icon && <Icon className="w-4 h-4" />}
+      {Icon && <Icon className="w-3 h-3" />}
       {children}
 
       {/* Active underline */}

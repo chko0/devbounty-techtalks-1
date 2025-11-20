@@ -14,7 +14,7 @@ export default function Logo() {
           e.target.src = "https://placehold.co/40x40/553c9a/ffffff?text=Icon";
         }}
       />
-      <h1 className="text-xl md:text-2xl font-bold text-white italic whitespace-nowrap">
+      <h1 className="text-xl font-bold text-white italic whitespace-nowrap">
         TechTalks
       </h1>
     </div>

@@ -16,7 +16,7 @@ export default function MarqueeItem({
       {Icon && <Icon size={iconSize} className={color} />}
       {text && (
         <span
-          className={`text-lg ${bold ? "font-semibold" : ""} ${
+          className={`text-md ${bold ? "font-semibold" : ""} ${
             color ? color : ""
           }`}
         >

@@ -17,7 +17,7 @@ export default function NavBar() {
   const currentPage = location.pathname.split("/")[1];
 
   return (
-    <div className="sticky top-0 z-50 w-full bg-black/80 backdrop-blur-md px-4 py-3 flex items-center justify-between">
+    <div className="sticky top-12 z-60 w-full bg-black/50 backdrop-blur-md px-4 py-2 flex items-center justify-between">
       <Link to="/">
         <Logo />
       </Link>
