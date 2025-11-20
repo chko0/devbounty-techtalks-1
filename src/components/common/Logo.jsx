@@ -2,7 +2,7 @@ export default function Logo() {
   const logoPath = "/logo.png";
 
   return (
-    <div className="flex items-center space-x-2 select-none w-max">
+    <div className="flex items-center space-x-1 select-none w-max">
       <img
         src={logoPath}
         alt="TechTalks Logo"
