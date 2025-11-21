@@ -1,4 +1,11 @@
-import { Code, Coffee, Play, SquareLibrary, Users } from "lucide-react";
+import {
+  Code,
+  Coffee,
+  Play,
+  SquareLibrary,
+  Users,
+  ShoppingBag,
+} from "lucide-react";
 import Button from "../common/Button";
 import GradientText from "../common/GradientText";
 import HeroStats from "./HeroStats";
@@ -58,17 +65,17 @@ export default function Hero() {
               <div className="flex items-center gap-6">
                 <HeroStats
                   text="Coffee"
-                  icon={<Coffee />}
+                  icon={Coffee}
                   gradient="from-green-500 to-teal-500"
                 />
                 <HeroStats
                   text="Code"
-                  icon={<Code />}
+                  icon={Code}
                   gradient="from-orange-500 to-red-500"
                 />
                 <HeroStats
                   text="Enjoy"
-                  icon={<Play />}
+                  icon={Play}
                   gradient="from-blue-500 to-purple-500"
                 />
               </div>
