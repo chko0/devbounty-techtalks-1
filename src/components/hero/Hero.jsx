@@ -2,6 +2,7 @@ import { Code, Coffee, Play, SquareLibrary, Users } from "lucide-react";
 import Button from "../common/Button";
 import GradientText from "../common/GradientText";
 import HeroStats from "./HeroStats";
+import HeroCodeBlock from "./HeroCodeBlock";
 
 export default function Hero() {
   return (
@@ -72,6 +73,9 @@ export default function Hero() {
                 />
               </div>
             </div>
+          </div>
+          <div>
+            <HeroCodeBlock />
           </div>
         </div>
       </div>
