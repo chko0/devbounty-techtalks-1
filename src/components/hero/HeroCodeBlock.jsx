@@ -1,11 +1,13 @@
+import { Code, Play } from "lucide-react";
+
 export default function HeroCodeBlock() {
   return (
     <>
       <div
         className="relative transform"
         style={{
-          perspective: "1200px",
-          transform: "rotateY(-18deg) rotateX(7deg)",
+          perspective: "1300px",
+          transform: "rotateY(-15deg) rotateX(5deg)",
           transformStyle: "preserve-3d",
         }}
       >
@@ -68,6 +70,16 @@ export default function HeroCodeBlock() {
             </div>
             <div className="text-cyan-500 text-sm">Start</div>
           </div>
+        </div>
+
+        {/* Button #1 */}
+        <div className="absolute flex items-center justify-center w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full animate-bounce -top-6 -right-6">
+          <Code width="20" height="20" />
+        </div>
+
+        {/* Button #2 */}
+        <div className="absolute flex items-center justify-center w-12 h-12 bg-gradient-to-r from-pink-500 to-purple-500 rounded-full animate-pulse -bottom-6 -left-6">
+          <Play width="20" height="20" />
         </div>
       </div>
     </>
