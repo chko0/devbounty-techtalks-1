@@ -7,7 +7,7 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
+  /* color: rgba(255, 255, 255, 0.87); */
   background-color: black;
 
   font-synthesis: none;
@@ -16,35 +16,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.marquee-container {
-  overflow: hidden;
-  white-space: nowrap;
-  position: relative;
-  /* background-color: #000; */
-  /* color: #fff; */
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  padding: 0.5rem 0;
-}
-
 .marquee-track {
-  display: inline-flex;
-  animation: animate-marquee 10s linear infinite;
+  animation: marquee 20s linear infinite;
 }
 
-.marquee-track::after {
-  content: attr(data-content);
-  display: inline-flex;
-  gap: 3rem;
-  margin-left: 3rem;
-}
-
-@keyframes animate-marquee {
-  0% {
+@keyframes marquee {
+  from {
     transform: translateX(0);
   }
-  100% {
-    transform: translateX(-50%);
+  to {
+    transform: translateX(-100%);
   }
 }

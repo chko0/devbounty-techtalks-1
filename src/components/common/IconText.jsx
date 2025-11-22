@@ -3,7 +3,7 @@ import clsx from "clsx";
 export default function IconText({
   icon: Icon,
   iconPosition = "left",
-  iconColor = "text-white",
+  iconClassName = "text-white",
   size = "4",
   gap = "2",
   className,
@@ -20,8 +20,15 @@ export default function IconText({
       )}
       {...props}
     >
-      {Icon && <Icon className={`w-${size} h-${size} ${iconColor}`} />}
-      <span>{children}</span>
+      {Icon && (
+        <Icon
+          className={clsx(
+            `w-${size} h-${size}`,
+            iconClassName // optional additional classes for icon
+          )}
+        />
+      )}
+      <>{children}</>
     </div>
   );
 }
