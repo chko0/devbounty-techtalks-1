@@ -6,9 +6,9 @@ export default function MarqueeBar() {
   const items = [...marqueeItems, ...marqueeItems];
 
   return (
-    <div className="sticky top-0 z-50 w-full overflow-hidden bg-black">
+    <div className="sticky top-0 z-60 w-full overflow-hidden bg-black">
       {/* Background */}
-      <div className="fixed inset-x-0 top-0 h-14 bg-gradient-to-r from-purple-700/20 via-cyan-500/20 to-blue-600/20 z-40 pointer-events-none" />
+      <div className="fixed inset-x-0 top-0 h-12 bg-gradient-to-r from-purple-700/20 via-cyan-500/20 to-blue-600/20 z-40 pointer-events-none" />
       {/* Marquee content */}
       <div className="relative z-50 flex items-center whitespace-nowrap overflow-hidden py-1.5 text-white border-b border-gray-800">
         <div className="marquee-track flex items-center gap-8">

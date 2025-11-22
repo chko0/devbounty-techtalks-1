@@ -9,6 +9,7 @@ export default function Button({
   className,
   to,
   icon: Icon,
+  iconColor,
   trailingIcon = false,
   ...props
 }) {
@@ -19,7 +20,12 @@ export default function Button({
   const finalClasses = twMerge(clsx(baseClasses, className));
 
   const content = (
-    <IconText icon={Icon} iconPosition="left" className="gap-2">
+    <IconText
+      icon={Icon}
+      iconPosition="left"
+      iconClassName={iconColor ? `text-${iconColor}` : ""}
+      className="gap-2"
+    >
       <span className="flex items-center gap-1">
         {children}
         {trailingIcon && (
