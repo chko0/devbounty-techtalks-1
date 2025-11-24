@@ -21,7 +21,7 @@ export default function MarqueeBar() {
         </div>
 
         <div
-          className="marquee-track flex items-center gap-8"
+          className="marquee-track flex items-center gap-8 ml-8"
           aria-hidden="true"
         >
           {items.map((item, i) => (

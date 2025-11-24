@@ -45,7 +45,7 @@ export default function NavBar() {
         <div className="hidden md:block">
           <Button
             to="/courses"
-            className="bg-cyan-600 hover:bg-blue-700 text-md px-4 py-2"
+            className="bg-blue-500 hover:bg-blue-700 text-md px-4 py-2"
           >
             Start Learning
           </Button>
@@ -82,7 +82,7 @@ export default function NavBar() {
             ))}
             <Button
               to="/courses"
-              className="bg-cyan-600 hover:bg-blue-100 text-md mb-1 px-4 py-2 w-full justify-center"
+              className="bg-blue-500 hover:bg-blue-700 text-md mb-1 px-4 py-2 w-full justify-center"
               onClick={() => setIsOpen(!isOpen)}
             >
               Start Learning

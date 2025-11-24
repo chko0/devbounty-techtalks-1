@@ -26,10 +26,10 @@ export default function Button({
       iconClassName={iconColor ? `text-${iconColor}` : ""}
       className="gap-2"
     >
-      <span className="flex items-center gap-1">
+      <span className="flex items-center gap-2">
         {children}
         {trailingIcon && (
-          <ChevronRight className="w-4 h-4 transform transition-transform duration-200 group-hover:translate-x-1" />
+          <ChevronRight className="w-3.5 h-3.5 transform transition-transform duration-200 group-hover:translate-x-1" />
         )}
       </span>
     </IconText>

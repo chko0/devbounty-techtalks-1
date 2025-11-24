@@ -9,11 +9,11 @@ export const marqueeItems = [
     className="text-yellow-400"
     iconClassName="text-yellow-400 animate-pulse"
   >
-    Limited Stock
+    <span className="font-semibold">Limited Stock</span>
   </IconText>,
 
   <div className="flex flex-items gap-2 items-center">
-    <div className="animate-pulse bg-cyan-400 w-2 h-2 rounded-full" />
+    <div className="animate-pulse bg-cyan-400 w-1.5 h-1.5 rounded-full" />
     <IconText key="new" icon={Sparkles} iconClassName="text-cyan-400">
       <span className="font-bold">NEW RELEASE</span>
       <span className="text-gray-300">Techtalks Card Game</span>

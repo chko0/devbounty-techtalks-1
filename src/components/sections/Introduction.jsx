@@ -7,9 +7,22 @@ export default function Introduction() {
       <div className="max-w-5xl mx-auto">
         <div className="font-bold mb-16 mt-6 text-5xl text-center text-white">
           What is
-          <GradientText className="mx-8">TechTalks</GradientText>?
+          <div className="relative inline-block">
+            <GradientText className="mx-8 relative z-30">
+              TechTalks
+            </GradientText>
+
+            {/* Circular orbit with gradient border */}
+            <div className="absolute top-1/2 left-1/2 w-[90%] h-[150%] rounded-full pointer-events-none">
+              <div className="w-full h-full rounded-full bg-gradient-to-r from-purple-500 via-cyan-400 to-blue-500 p-1 transform -translate-x-[50%] -translate-y-[50%]">
+                <div className="w-full h-full rounded-full bg-black" />
+              </div>
+            </div>
+          </div>
+          ?
         </div>
-        <p className="text-2xl px-4 text-center leading-relaxed text-gray-300 mb-16">
+
+        <p className="text-xl lg:text-2xl px-4 text-center leading-relaxed text-gray-300 mb-16">
           TechTalks is more than just a learning platform. It's a movement
           designed to bridge the gap between traditional education and the
           real-world tech industry. We provide you with the connections to
