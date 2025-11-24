@@ -28,3 +28,60 @@
     transform: translateX(-100%);
   }
 }
+
+/* --------------------------------------------- */
+/* MARQUEE BASE                                   */
+/* --------------------------------------------- */
+.marquee {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+
+/* Track that moves */
+.marquee-track {
+  display: flex;
+  flex-shrink: 0;
+}
+
+/* Duplicate track for seamless looping */
+.marquee-content {
+  display: flex;
+  gap: 6rem; /* adjust spacing between items */
+  white-space: nowrap;
+}
+
+/* --------------------------------------------- */
+/* ANIMATIONS                                     */
+/* --------------------------------------------- */
+
+/* Scroll left */
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Scroll right */
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Classes to trigger the animations */
+.marquee-left .marquee-track {
+  animation: marquee-left 50s linear infinite;
+}
+
+.marquee-right .marquee-track {
+  animation: marquee-right 50s linear infinite;
+}
