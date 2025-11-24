@@ -3,22 +3,17 @@ import Button from "../common/Button";
 import GradientText from "../common/GradientText";
 import HeroStats from "./HeroStats";
 import HeroCodeBlock from "./HeroCodeBlock";
+import GradientWash from "../common/GradientWash";
+import GlowLines from "../common/GlowLines";
 
 export default function Hero() {
   return (
     <section className="relative z-0 min-h-screen bg-black overflow-hidden pt-18">
       <div className="absolute inset-0 overflow-hidden z-[0]">
-        {/* Background gradient wash */}
-        <div className="pointer-events-none">
-          <div className="absolute inset-0 bg-gradient-to-tl from-cyan-500/20 via-transparent to-purple-600/20" />
-        </div>
-
-        {/* Decorative horizontal glow lines */}
-        <div className="pointer-events-none opacity-10">
-          <span className="absolute inset-x-0 top-[28%] h-[1px] bg-gradient-to-l from-transparent via-cyan-300 to-transparent" />
-          <span className="absolute inset-x-0 bottom-[28%] h-[1px] bg-gradient-to-l from-transparent via-purple-300 to-transparent" />
-        </div>
+        <GradientWash />
+        <GlowLines />
       </div>
+
       {/* Content goes here */}
       <div className="relative z-10 grid gap-12 items-center lg:grid-cols-2 px-6 py-12">
         <div className="space-y-8">
