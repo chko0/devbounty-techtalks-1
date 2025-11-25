@@ -1,5 +1,6 @@
 import FeatureHighlight from "../components/featureHighlight/FeatureHighlight";
 import Hero from "../components/hero/Hero";
+import Courses from "../components/sections/Courses";
 import FreeAccessAd from "../components/sections/FreeAccessAd";
 import Introduction from "../components/sections/Introduction";
 import JoinUs from "../components/sections/JoinUs";
@@ -16,6 +17,7 @@ export default function HomePage() {
       <QuoteBlock />
       <MeetTheTeam />
       <JoinUs />
+      <Courses />
     </>
   );
 }
