@@ -85,33 +85,39 @@ export default function NavBar() {
           )}
         </button>
       </div>
-
       {/* Mobile menu */}
-      {isOpen && (
-        <div className="md:hidden bg-black/30 backdrop-blur-md w-full px-8 py-4 transition-transform duration-300 ease-in-out">
-          <nav className="flex flex-col gap-4">
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.path}
-                href={link.path}
-                icon={link.icon}
-                isActive={currentPage === link.path.split("/")[1]}
-                isMobile={true}
-                onClick={() => setIsOpen(false)} // close menu on click
-              >
-                {link.name}
-              </NavLink>
-            ))}
-            <Button
-              to="/courses"
-              className="bg-blue-500 hover:bg-blue-700 text-md mb-1 px-4 py-2 w-full justify-center"
-              onClick={() => setIsOpen(!isOpen)}
+      <div
+        className={`md:hidden bg-black/30 backdrop-blur-md w-full px-8 py-4 overflow-hidden transition-all duration-300 ease-in-out
+        ${
+          isOpen
+            ? "opacity-100 max-h-96 translate-y-0"
+            : "opacity-0 max-h-0 -translate-y-4"
+        }`}
+      >
+        <nav className="flex flex-col gap-4">
+          {navLinks.map((link) => (
+            <NavLink
+              key={link.path}
+              href={link.path}
+              icon={link.icon}
+              isActive={currentPage === link.path.split("/")[1]}
+              isMobile={true}
+              onClick={() => setIsOpen(false)}
             >
-              Start Learning
-            </Button>
-          </nav>
-        </div>
-      )}
+              {link.name}
+            </NavLink>
+          ))}
+
+          <Button
+            to="/courses"
+            className="bg-blue-500 hover:bg-blue-700 text-md mb-1 px-4 py-2 w-full justify-center"
+            onClick={() => setIsOpen(false)}
+          >
+            Start Learning
+          </Button>
+        </nav>
+        {/* )} */}
+      </div>
     </header>
   );
 }
