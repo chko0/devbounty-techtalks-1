@@ -7,13 +7,23 @@
   font-weight: 400;
 
   color-scheme: light dark;
-  /* color: rgba(255, 255, 255, 0.87); */
   background-color: black;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Text Selection Color */
+::selection {
+  background-color: #18a1b6; /* Tailwind cyan-400 */
+  color: #0f0f0f; /* Dark text for contrast */
+}
+
+::-moz-selection {
+  background-color: #18a1b6;
+  color: #0f0f0f;
 }
 
 .marquee-track {

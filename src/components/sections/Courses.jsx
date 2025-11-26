@@ -8,9 +8,10 @@ import { courses } from "../../data/courses";
 import CourseItem from "../course/courseItem";
 import IconText from "../common/IconText";
 import NoCoursesFound from "../course/NoCoursesFound";
+import FadeUp from "../common/FadeUp";
 
 export default function Courses() {
-  const [showFilters, setShowFilters] = useState(true);
+  const [showFilters, setShowFilters] = useState(false);
   const [level, setLevel] = useState("all");
   const [language, setLanguage] = useState("all");
   const [sortBy, setSortBy] = useState("newest");
@@ -64,20 +65,22 @@ export default function Courses() {
 
   return (
     <section className="px-6 py-16 mb-24">
-      <div className="mx-auto max-w-4xl text-center mb-12">
-        <IconText icon={BookOpen} iconClassName="text-cyan-400 w-8 h-8 mr-3">
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl text-white font-bold">
-            All TechTalks <GradientText>Courses</GradientText>
-          </h1>
-        </IconText>
-        {/* <h1 className="text-6xl text-white font-bold mb-4">
+      <FadeUp delay={0.2}>
+        <div className="group mx-auto max-w-4xl text-center mb-12">
+          <IconText icon={BookOpen} iconClassName="text-cyan-400 w-8 h-8 mr-3">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl text-white font-bold">
+              All TechTalks <GradientText>Courses</GradientText>
+            </h1>
+          </IconText>
+          {/* <h1 className="text-6xl text-white font-bold mb-4">
           All Techtalks <GradientText>Courses</GradientText>
         </h1> */}
-        <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mt-4">
-          Curated courses for developers and tech enthusiasts, learn at your
-          pace.
-        </p>
-      </div>
+          <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mt-4">
+            Curated courses for developers and tech enthusiasts, learn at your
+            pace.
+          </p>
+        </div>
+      </FadeUp>
 
       <SearchInput
         placeholder="Search courses, instructors, or topics..."
@@ -158,8 +161,10 @@ export default function Courses() {
       {/* Courses */}
       {filteredCourses.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredCourses.map((course) => (
-            <CourseItem key={course.id} course={course} />
+          {filteredCourses.map((course, index) => (
+            <FadeUp key={course.id} delay={index * 0.2}>
+              <CourseItem course={course} />
+            </FadeUp>
           ))}
         </div>
       ) : (

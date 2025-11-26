@@ -1,37 +1,42 @@
+import FadeUp from "../common/FadeUp";
 import GradientText from "../common/GradientText";
 
 export default function Introduction() {
   return (
     <section className="bg-black px-6 py-16">
       <div className="max-w-5xl mx-auto">
-        <div className="font-bold mb-16 mt-6 text-5xl text-center text-white">
-          What is
-          <div className="relative inline-block">
-            <GradientText className="mx-8 relative z-30">
-              TechTalks
-            </GradientText>
+        <FadeUp delay={0.2}>
+          <div className="font-bold mb-16 mt-6 text-5xl text-center text-white">
+            What is
+            <div className="relative inline-block">
+              <GradientText className="mx-8 relative z-30">
+                TechTalks
+              </GradientText>
 
-            {/* Circular orbit with gradient border */}
-            <div className="absolute top-1/2 left-1/2 w-[90%] h-[150%] rounded-full pointer-events-none">
-              <div className="w-full h-full rounded-full bg-gradient-to-r from-purple-500 via-cyan-400 to-blue-500 p-1 transform -translate-x-[50%] -translate-y-[50%]">
-                <div className="w-full h-full rounded-full bg-black" />
+              {/* Circular orbit with gradient border */}
+              <div className="absolute top-1/2 left-1/2 w-[90%] h-[150%] rounded-full pointer-events-none">
+                <div className="w-full h-full rounded-full bg-gradient-to-r from-purple-500 via-cyan-400 to-blue-500 p-1 transform -translate-x-[50%] -translate-y-[50%]">
+                  <div className="w-full h-full rounded-full bg-black" />
+                </div>
               </div>
             </div>
+            ?
           </div>
-          ?
-        </div>
+        </FadeUp>
 
-        <p className="text-xl lg:text-2xl px-4 text-center leading-relaxed text-gray-300 mb-16">
-          TechTalks is more than just a learning platform. It's a movement
-          designed to bridge the gap between traditional education and the
-          real-world tech industry. We provide you with the connections to
-          industry professionals, carefully curated courses that cut through the
-          noise, and hands-on events and workshops that accelerate your growth.
-          At TechTalks, you'll discover the clear path in programming that
-          universities often fail to provide, empowering your tech background
-          with practical skills, mentorship, and a community that truly supports
-          your journey from student to professional developer.
-        </p>
+        <FadeUp delay={0.4} y={30}>
+          <p className="text-xl lg:text-2xl px-4 text-center leading-relaxed text-gray-300 mb-16">
+            TechTalks is more than just a learning platform. It's a movement
+            designed to bridge the gap between traditional education and the
+            real-world tech industry. We provide you with the connections to
+            industry professionals, carefully curated courses that cut through
+            the noise, and hands-on events and workshops that accelerate your
+            growth. At TechTalks, you'll discover the clear path in programming
+            that universities often fail to provide, empowering your tech
+            background with practical skills, mentorship, and a community that
+            truly supports your journey from student to professional developer.
+          </p>
+        </FadeUp>
       </div>
     </section>
   );
