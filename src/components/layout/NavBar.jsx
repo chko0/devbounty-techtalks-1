@@ -88,7 +88,7 @@ export default function NavBar() {
 
       {/* Mobile menu */}
       {isOpen && (
-        <div className="md:hidden bg-black/30 backdrop-blur-md w-full px-4 py-4 transition-transform duration-300 ease-in-out">
+        <div className="md:hidden bg-black/30 backdrop-blur-md w-full px-8 py-4 transition-transform duration-300 ease-in-out">
           <nav className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <NavLink

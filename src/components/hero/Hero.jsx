@@ -3,7 +3,6 @@ import Button from "../common/Button";
 import GradientText from "../common/GradientText";
 import HeroStats from "./HeroStats";
 import HeroCodeBlock from "./HeroCodeBlock";
-import GradientWash from "../common/GradientWash";
 import GlowLines from "../common/GlowLines";
 
 export default function Hero() {
@@ -20,7 +19,7 @@ export default function Hero() {
           <p className="tracking-widest text-sm text-cyan-400 font-medium">
             BUILT BY DEVS, FOR DEVS
           </p>
-          <h1 className="text-5xl lg:text-7xl text-white font-bold leading-tight">
+          <h1 className="text-5xl lg:text-7xl text-white font-bold leading-tight transition-all duration-300">
             Lebanon's <GradientText>Biggest Tech Community</GradientText>
           </h1>
           <p className="text-xl text-gray-300">
