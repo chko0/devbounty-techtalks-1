@@ -3,7 +3,7 @@ import clsx from "clsx";
 export default function IconText({
   icon: Icon,
   iconPosition = "left",
-  iconClassName = "text-white",
+  iconClassName = "",
   size = "4",
   gap = "2",
   className,
@@ -13,7 +13,7 @@ export default function IconText({
   return (
     <div
       className={clsx(
-        "inline-flex items-center",
+        "inline-flex items-center group",
         iconPosition === "right" && "flex-row-reverse",
         `gap-${gap}`,
         className
