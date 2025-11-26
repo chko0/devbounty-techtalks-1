@@ -11,7 +11,7 @@ export default function HeroCodeBlock() {
           transformStyle: "preserve-3d",
         }}
       >
-        <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-md p-8 border border-gray-700">
+        <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-md p-5 border border-gray-700">
           <div className="bg-black rounded-lg p-4 mb-4">
             <div className="flex items-center gap-2 mb-5">
               <div className="bg-red-400 rounded-full w-3 h-3" />
@@ -49,11 +49,11 @@ export default function HeroCodeBlock() {
                 <div className="text-sm font-medium text-white">
                   React Fundamentals
                 </div>
-                <div className="text-xs text-gray-300">85% Complete</div>
+                <div className="text-xs text-gray-400">85% Complete</div>
               </div>
             </div>
-            <div className="bg-gray-500 rounded-full w-12 h-2">
-              <div className="bg-gradient-to-r from-purple-400 to-cyan-400 rounded-full w-10 h-2"></div>
+            <div className="bg-gray-700 rounded-full w-12 h-2">
+              <div className="bg-gradient-to-r from-purple-500 to-cyan-500 rounded-full w-10 h-2"></div>
             </div>
           </div>
 
@@ -65,7 +65,7 @@ export default function HeroCodeBlock() {
                 <div className="text-sm font-medium text-white">
                   Master Node.js
                 </div>
-                <div className="text-xs text-gray-300">Next Course</div>
+                <div className="text-xs text-gray-400">Next Course</div>
               </div>
             </div>
             <div className="text-cyan-500 text-sm">Start</div>

@@ -16,7 +16,6 @@ export default function HomePage() {
       <FreeAccessAd />
       <QuoteBlock />
       <MeetTheTeam />
-      <JoinUs />
       <Courses />
     </>
   );

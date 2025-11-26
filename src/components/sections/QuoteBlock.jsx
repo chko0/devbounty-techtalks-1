@@ -1,6 +1,6 @@
 export default function QuoteBlock() {
   return (
-    <section className="bg-black px-6 py-12 mx-auto">
+    <section className="bg-black px-6 py-16 mx-auto">
       <div className="relative max-w-4xl mx-auto border border-purple-500/25 rounded-xl p-12 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
         <div className="relative w-full h-full">
           {/* Top-left quote */}

@@ -1,4 +1,4 @@
-import { Zap, Package, Sparkles, Gift, TrendingUp, Circle } from "lucide-react";
+import { Zap, Package, Sparkles, Gift, TrendingUp } from "lucide-react";
 import IconText from "../components/common/IconText";
 import Button from "../components/common/Button";
 
@@ -7,7 +7,7 @@ export const marqueeItems = [
     key="limited"
     icon={Zap}
     className="text-yellow-400"
-    iconClassName="text-yellow-400 animate-pulse"
+    iconClassName="animate-pulse"
   >
     <span className="font-semibold">Limited Stock</span>
   </IconText>,
@@ -15,7 +15,7 @@ export const marqueeItems = [
   <div className="flex flex-items gap-2 items-center">
     <div className="animate-pulse bg-cyan-400 w-1.5 h-1.5 rounded-full" />
     <IconText key="new" icon={Sparkles} iconClassName="text-cyan-400">
-      <span className="font-bold">NEW RELEASE</span>
+      <span className="text-white font-bold">NEW RELEASE</span>
       <span className="text-gray-300">Techtalks Card Game</span>
     </IconText>
   </div>,

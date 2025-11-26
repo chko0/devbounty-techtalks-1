@@ -1,9 +1,8 @@
-import { Circle } from "lucide-react";
 import GradientText from "../common/GradientText";
 
 export default function Introduction() {
   return (
-    <section className="bg-black px-6 py-12">
+    <section className="bg-black px-6 py-16">
       <div className="max-w-5xl mx-auto">
         <div className="font-bold mb-16 mt-6 text-5xl text-center text-white">
           What is

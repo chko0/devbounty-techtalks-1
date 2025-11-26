@@ -7,13 +7,8 @@ import { Clock, Users, Star, Play } from "lucide-react";
 export default function CourseItem({ course }) {
   return (
     <div
-      className="
-        course-card group relative 
-        bg-gray-900/50 backdrop-blur-sm 
-        border border-gray-800 rounded-xl 
-        overflow-hidden hover:border-cyan-500/50 
-        transition-all duration-300 cursor-pointer
-      "
+      className="course-card group relative bg-gray-900/50 backdrop-blur-sm border border-gray-800 rounded-xl overflow-hidden hover:border-cyan-500/50 
+        transition-all duration-300 cursor-pointer"
     >
       {/* IMAGE */}
       <div className="relative">
@@ -35,13 +30,7 @@ export default function CourseItem({ course }) {
       {/* CONTENT */}
       <div className="p-4 sm:p-6">
         {/* TITLE */}
-        <h3
-          className="
-            text-lg sm:text-xl font-bold text-white 
-            mb-2 sm:mb-3 line-clamp-2 
-            group-hover:text-cyan-400 transition-colors
-          "
-        >
+        <h3 className=" text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 line-clamp-2 group-hover:text-cyan-400 transition-colors">
           {course.title}
         </h3>
 
@@ -52,13 +41,18 @@ export default function CourseItem({ course }) {
 
         {/* INFO ROW */}
         <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6 text-xs sm:text-sm text-gray-400">
-          <IconText icon={Clock} iconClassName="text-gray-400">
+          <IconText icon={Clock} gap="1">
             {course.duration}
           </IconText>
-          <IconText icon={Users} iconClassName="text-gray-400">
-            {course.students}+
+          <IconText icon={Users} gap="1">
+            {course.students}
+            {course.students ? "+" : ""}
           </IconText>
-          <IconText icon={Star} iconClassName="text-yellow-400">
+          <IconText
+            icon={course.rating ? Star : null}
+            gap="1"
+            iconClassName="text-yellow-400"
+          >
             {course.rating}
           </IconText>
         </div>

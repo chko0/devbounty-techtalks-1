@@ -8,14 +8,14 @@ import GlowLines from "../common/GlowLines";
 
 export default function Hero() {
   return (
-    <section className="relative z-0 min-h-screen bg-black overflow-hidden pt-18">
+    <section className="relative z-0 min-h-screen overflow-hidden">
       <div className="absolute inset-0 overflow-hidden z-[0]">
-        <GradientWash />
+        {/* <GradientWash /> */}
         <GlowLines />
       </div>
 
       {/* Content goes here */}
-      <div className="relative z-10 grid gap-12 items-center lg:grid-cols-2 px-6 py-12">
+      <div className="relative z-10 grid gap-12 items-center lg:grid-cols-2 px-6 py-6">
         <div className="space-y-8">
           <p className="tracking-widest text-sm text-cyan-400 font-medium">
             BUILT BY DEVS, FOR DEVS

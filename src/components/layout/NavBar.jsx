@@ -1,9 +1,31 @@
 import { useState } from "react";
-import { Home, Target, Trophy, Users, Menu, X, BookOpen } from "lucide-react";
-import NavLink from "../common/NavLink";
-import Logo from "../common/Logo";
 import { Link, useLocation } from "react-router-dom";
+import { Home, Target, Trophy, Users, Menu, X, BookOpen } from "lucide-react";
+import Logo from "../common/Logo";
 import Button from "../common/Button";
+
+function NavLink({ href, icon: Icon, children, isActive, isMobile, onClick }) {
+  return (
+    <Link
+      to={href}
+      key={href}
+      onClick={onClick}
+      className={`relative inline-flex items-center gap-1 font-semibold transition-colors text-sm ${
+        isActive ? "text-[#00E5FF]" : "text-white hover:text-[#00E5FF]"
+      }`}
+    >
+      {Icon && <Icon className="w-3 h-3" />}
+      {children}
+
+      {/* Active underline */}
+      {isActive && !isMobile && (
+        <span
+          className={`absolute bottom-[-4px] left-0 h-[2px] w-full bg-cyan-400`}
+        ></span>
+      )}
+    </Link>
+  );
+}
 
 export default function NavBar() {
   const location = useLocation();
@@ -45,7 +67,7 @@ export default function NavBar() {
         <div className="hidden md:block">
           <Button
             to="/courses"
-            className="bg-blue-500 hover:bg-blue-700 text-md px-4 py-2"
+            className="bg-blue-500 rounded-lg hover:bg-blue-700 text-md px-4 py-2 font-semibold text-sm"
           >
             Start Learning
           </Button>

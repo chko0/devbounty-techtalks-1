@@ -30,7 +30,7 @@ export default function TeamMember({ teamMember }) {
           <div className="text-xl font-bold text-white mb-2">
             {teamMember.name}
           </div>
-          <p className="text-sm font-semibold text-purple-400 mb-2">
+          <p className="text-sm font-semibold text-purple-400 mb-8">
             {teamMember.role}
           </p>
         </div>

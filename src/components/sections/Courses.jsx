@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import SelectField from "../common/SelectField";
 import Button from "../common/Button";
 import GradientText from "../common/GradientText";
@@ -8,6 +8,7 @@ import { courses } from "../../data/courses";
 import CourseItem from "../course/courseItem";
 import IconText from "../common/IconText";
 import NoCoursesFound from "../course/NoCoursesFound";
+
 export default function Courses() {
   const [showFilters, setShowFilters] = useState(true);
   const [level, setLevel] = useState("all");
@@ -62,17 +63,17 @@ export default function Courses() {
   }, [level, language, sortBy, search]);
 
   return (
-    <section className="px-6 py-16">
+    <section className="px-6 py-16 mb-24">
       <div className="mx-auto max-w-4xl text-center mb-12">
         <IconText icon={BookOpen} iconClassName="text-cyan-400 w-8 h-8 mr-3">
-          <h1 className="text-6xl text-white font-bold">
-            All Techtalks <GradientText>Courses</GradientText>
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl text-white font-bold">
+            All TechTalks <GradientText>Courses</GradientText>
           </h1>
         </IconText>
         {/* <h1 className="text-6xl text-white font-bold mb-4">
           All Techtalks <GradientText>Courses</GradientText>
         </h1> */}
-        <p className="text-2xl text-gray-300 leading-relaxed mt-4">
+        <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mt-4">
           Curated courses for developers and tech enthusiasts, learn at your
           pace.
         </p>
@@ -90,7 +91,7 @@ export default function Courses() {
           <div className="flex items-center gap-3">
             <Button
               icon={SlidersHorizontal}
-              className="text-gray-300 bg-gray-900 border border-gray-700 rounded-lg hover:border-gray-600 hover:text-white hover:bg-gray-800/50 transition-all duration-200"
+              className="text-gray-300 bg-gray-900/50 border border-gray-700 rounded-xl hover:border-gray-600 hover:text-white hover:bg-gray-800/50 transition-all duration-200 font-normal"
               onClick={() => setShowFilters(!showFilters)}
             >
               Filters
@@ -112,7 +113,7 @@ export default function Courses() {
 
         {/* Filters */}
         {showFilters && (
-          <div className="bg-gray-900/30 border border-gray-900 rounded-lg p-6">
+          <div className="bg-gray-900/30 border border-gray-700/50 rounded-xl p-6">
             <div className="gap-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
               <SelectField
                 label="Level"

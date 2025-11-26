@@ -3,6 +3,7 @@ import GradientText from "../common/GradientText";
 import IconText from "../common/IconText";
 import TeamMember from "../team/TeamMember";
 import { team } from "../../data/team";
+import JoinUs from "./JoinUs";
 
 export default function MeetTheTeam() {
   return (
@@ -23,6 +24,10 @@ export default function MeetTheTeam() {
         {team.map((teamMember) => (
           <TeamMember key={teamMember.name} teamMember={teamMember} />
         ))}
+      </div>
+
+      <div>
+        <JoinUs />
       </div>
     </section>
   );
