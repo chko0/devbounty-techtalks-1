@@ -2,10 +2,10 @@ import Button from "../common/Button";
 
 export default function JoinUs() {
   return (
-    <section className="bg-black px-6 py-6 lg:py-12 mx-auto mt-10">
-      <div className="relative max-w-4xl mx-auto border border-purple-500/25 rounded-xl p-12 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
+    <section className="bg-black p-6 sm:p-10 lg:py-12 mx-auto max-w-4xl  mt-10">
+      <div className="relative mx-auto border border-purple-500/25 rounded-xl p-12 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
         <div className="text-center">
-          <p className="text-3xl text-white font-bold leading-relaxed mb-4">
+          <p className="text-3xl text-white font-bold leading-relaxed mb-2">
             Want to Join Our Team?
           </p>
 
