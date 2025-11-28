@@ -4,7 +4,7 @@ export const courses = [
     title: "Master Tailwind CSS",
     description:
       "Master responsive design, utility-first workflows, and custom components with the latest version of Tailwind CSS.",
-    image: "tailwindCSS_course.png",
+    image: "tailwindCSS_course",
     duration: "1h",
     rating: 4.9,
     students: 40,
@@ -15,7 +15,7 @@ export const courses = [
     title: "Master Next.js 16",
     description:
       "Build powerful, modern web applications with Next.js. Learn server-side rendering, API routes, and deployment strategies.",
-    image: "NEXTjs_course.png",
+    image: "NEXTjs_course",
     duration: "Coming Soon",
     rating: null,
     students: 0,
