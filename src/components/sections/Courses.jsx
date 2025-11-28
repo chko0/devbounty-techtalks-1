@@ -115,47 +115,53 @@ export default function Courses() {
         </div>
 
         {/* Filters */}
-        {showFilters && (
-          <div className="bg-gray-900/30 border border-gray-700/50 rounded-xl p-6">
-            <div className="gap-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
-              <SelectField
-                label="Level"
-                value={level}
-                onChange={setLevel}
-                options={[
-                  { value: "all", label: "All Levels" },
-                  { value: "Intermediate", label: "Intermediate" },
-                  { value: "Beginner", label: "Beginner" },
-                ]}
-              />
-              <SelectField
-                label="Language"
-                value={language}
-                onChange={setLanguage}
-                options={[{ value: "all", label: "All Languages" }]}
-              />
-              <SelectField
-                label="Sort By"
-                value={sortBy}
-                onChange={setSortBy}
-                options={[
-                  { value: "newest", label: "Newest First" },
-                  { value: "rated", label: "Highest Rated" },
-                  { value: "popular", label: "Most Popular" },
-                  { value: "shortest", label: "Shortest First" },
-                ]}
-              />
-              <div className="flex items-end">
-                <Button
-                  onClick={() => setShowFilters(!showFilters)}
-                  className="flex flex-items justify-center bg-cyan-600 hover:bg-cyan-500 text-white font-semibold rounded-lg w-full p-3"
-                >
-                  Apply Filters
-                </Button>
-              </div>
+        <div
+          className={`overflow-hidden transition-all duration-300 group
+            ${
+              showFilters
+                ? "opacity-100 scale-100 max-h-[800px] p-6"
+                : "opacity-0 scale-95 max-h-0 p-0"
+            }
+            bg-gray-900/30 border border-gray-700/50 rounded-xl`}
+        >
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <SelectField
+              label="Level"
+              value={level}
+              onChange={setLevel}
+              options={[
+                { value: "all", label: "All Levels" },
+                { value: "Intermediate", label: "Intermediate" },
+                { value: "Beginner", label: "Beginner" },
+              ]}
+            />
+            <SelectField
+              label="Language"
+              value={language}
+              onChange={setLanguage}
+              options={[{ value: "all", label: "All Languages" }]}
+            />
+            <SelectField
+              label="Sort By"
+              value={sortBy}
+              onChange={setSortBy}
+              options={[
+                { value: "newest", label: "Newest First" },
+                { value: "rated", label: "Highest Rated" },
+                { value: "popular", label: "Most Popular" },
+                { value: "shortest", label: "Shortest First" },
+              ]}
+            />
+            <div className="flex items-end">
+              <Button
+                onClick={() => setShowFilters(!showFilters)}
+                className="flex flex-items justify-center bg-cyan-600 hover:bg-cyan-500 text-white font-semibold rounded-lg w-full p-3"
+              >
+                Apply Filters
+              </Button>
             </div>
           </div>
-        )}
+        </div>
       </div>
 
       {/* Courses */}
