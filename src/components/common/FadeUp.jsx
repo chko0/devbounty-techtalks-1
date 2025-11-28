@@ -10,17 +10,32 @@ export default function FadeUp({
   motionProps = {},
   ...props
 }) {
-  return (
-    <motion.div
-      initial={{ opacity: 0, x, y, ...motionProps.initial }}
-      whileInView={{ opacity: 1, x: 0, y: 0, ...motionProps.whileInView }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{
+  const variants = {
+    hidden: {
+      opacity: 0,
+      x,
+      y,
+      ...motionProps?.variants?.hidden,
+    },
+    show: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: {
         duration,
         delay,
         ease: "easeOut",
-        ...motionProps.transition,
-      }}
+        ...motionProps?.variants?.show?.transition,
+      },
+    },
+  };
+
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.15, margin: "-10% 0px" }}
+      variants={variants}
       className={className}
       {...props}
     >

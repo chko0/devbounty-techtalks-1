@@ -9,6 +9,7 @@ import CourseItem from "../course/courseItem";
 import IconText from "../common/IconText";
 import NoCoursesFound from "../course/NoCoursesFound";
 import FadeUp from "../common/FadeUp";
+import SectionSubtitle from "../common/SectionSubtitle";
 
 export default function Courses() {
   const [showFilters, setShowFilters] = useState(false);
@@ -75,10 +76,10 @@ export default function Courses() {
           {/* <h1 className="text-6xl text-white font-bold mb-4">
           All Techtalks <GradientText>Courses</GradientText>
         </h1> */}
-          <p className="text-lg sm:text-xl text-gray-300 leading-relaxed mt-4">
+          <SectionSubtitle className="mt-4">
             Curated courses for developers and tech enthusiasts, learn at your
             pace.
-          </p>
+          </SectionSubtitle>
         </div>
       </FadeUp>
 
@@ -89,7 +90,7 @@ export default function Courses() {
         className="max-w-xl mx-auto mb-6"
       />
 
-      <div className="mb-12">
+      <div className="mb-6">
         <div className="flex flex-col sm:flex-row justify-between items-center mb-5 gap-3 sm:gap-0">
           <div className="flex items-center gap-3">
             <Button

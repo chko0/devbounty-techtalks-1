@@ -5,6 +5,38 @@ import HeroStats from "./HeroStats";
 import HeroCodeBlock from "./HeroCodeBlock";
 import GlowLines from "../common/GlowLines";
 import FadeUp from "../common/FadeUp";
+import SectionSubtitle from "../common/SectionSubtitle";
+import SectionTitle from "../common/SectionTitle";
+import clsx from "clsx";
+
+export function HeroCTA({ className = "" }) {
+  return (
+    <FadeUp delay={0.4}>
+      <div className="flex gap-4 pt-5 flex-col sm:flex-row">
+        <Button
+          to="/courses"
+          trailingIcon={true}
+          icon={BookOpen}
+          className={clsx(
+            "px-8 py-4 rounded-lg text-lg text-white " +
+              "bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-600 hover:to-cyan-500 transition-all transform hover:scale-105 duration-400 " +
+              "hover:shadow-lg hover:shadow-cyan-500/25 ",
+            className
+          )}
+        >
+          Explore Courses
+        </Button>
+        <Button
+          to="https://chat.whatsapp.com/Ige7sFb3m1LFqGgQwi3FV7"
+          icon={Users}
+          className="px-8 py-4 rounded-lg text-lg text-purple-400 border-2 bg-transparent border-purple-400 hover:bg-purple-400 hover:text-white transition-all transform hover:scale-105 duration-400"
+        >
+          Join Community
+        </Button>
+      </div>
+    </FadeUp>
+  );
+}
 
 export default function Hero() {
   return (
@@ -19,40 +51,16 @@ export default function Hero() {
           <p className="tracking-widest text-sm text-cyan-400 font-medium">
             BUILT BY DEVS, FOR DEVS
           </p>
-          <FadeUp delay={0.0}>
-            <h1 className="text-5xl lg:text-7xl text-white font-bold leading-tight transition-all duration-300">
-              Lebanon's <GradientText>Biggest Tech Community</GradientText>
-            </h1>
-          </FadeUp>
 
-          <FadeUp delay={0.2}>
-            <p className="text-xl text-gray-300">
-              Code smarter, not harder → with the right path and the right
-              people.
-            </p>
-          </FadeUp>
+          <SectionTitle>
+            Lebanon's <GradientText>Biggest Tech Community</GradientText>
+          </SectionTitle>
 
-          <FadeUp delay={0.4}>
-            <div className="flex gap-4 pt-5 flex-col sm:flex-row">
-              <Button
-                to="/courses"
-                trailingIcon={true}
-                icon={BookOpen}
-                className="px-8 py-4 rounded-lg text-lg text-white
-                bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-600 hover:to-cyan-500 transition-all transform hover:scale-105 duration-400
-                hover:shadow-lg hover:shadow-cyan-500/25"
-              >
-                Explore Courses
-              </Button>
-              <Button
-                to="https://chat.whatsapp.com/Ige7sFb3m1LFqGgQwi3FV7"
-                icon={Users}
-                className="px-8 py-4 rounded-lg text-lg text-purple-400 border-2 bg-transparent border-purple-400 hover:bg-purple-400 hover:text-white transition-all transform hover:scale-105 duration-400"
-              >
-                Join Community
-              </Button>
-            </div>
-          </FadeUp>
+          <SectionSubtitle>
+            Code smarter, not harder → with the right path and the right people.
+          </SectionSubtitle>
+
+          <HeroCTA />
 
           <div className="pt-8">
             <p className="text-sm mb-4 text-gray-400">

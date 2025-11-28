@@ -1,4 +1,9 @@
+import GradientText from "../components/common/GradientText";
+import SectionSubtitle from "../components/common/SectionSubtitle";
+import SectionTitle from "../components/common/SectionTitle";
 import SEO from "../components/common/SEO";
+import IconText from "../components/common/IconText";
+import { Trophy } from "lucide-react";
 
 export default function ChampionsPage() {
   return (
@@ -11,7 +16,17 @@ export default function ChampionsPage() {
         classification="Education, Technology, Programming"
       />
 
-      <div>Champions</div>
+      <div className="text-center max-w-4xl mx-auto mb-20">
+        <SectionTitle className="mb-4 lg:text-6xl">
+          <IconText icon={Trophy} iconClassName="text-yellow-400 w-8 h-8 mr-3">
+            Our <GradientText>Champions</GradientText>
+          </IconText>
+        </SectionTitle>
+        <SectionSubtitle className="mb-6">
+          Meet the exceptional interns who are building the future of technology
+          with TechTalks!
+        </SectionSubtitle>
+      </div>
     </>
   );
 }

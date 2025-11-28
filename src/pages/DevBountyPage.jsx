@@ -1,3 +1,6 @@
+import GradientText from "../components/common/GradientText";
+import SectionSubtitle from "../components/common/SectionSubtitle";
+import SectionTitle from "../components/common/SectionTitle";
 import SEO from "../components/common/SEO";
 
 export default function DevBountyPage() {
@@ -11,7 +14,15 @@ export default function DevBountyPage() {
         classification="Education, Technology, Programming"
       />
 
-      <div>DevBountyPage</div>
+      <div className="text-center max-w-4xl mx-auto mb-20">
+        <SectionTitle className="mb-4 lg:text-6xl">
+          <GradientText>DEV</GradientText>BOUNTY
+        </SectionTitle>
+        <SectionSubtitle className="mb-6">
+          Complete weekly coding challenges. Submit your solution. Claim your
+          bounty.
+        </SectionSubtitle>
+      </div>
     </>
   );
 }

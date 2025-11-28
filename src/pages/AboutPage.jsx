@@ -1,3 +1,6 @@
+import GradientText from "../components/common/GradientText";
+import SectionSubtitle from "../components/common/SectionSubtitle";
+import SectionTitle from "../components/common/SectionTitle";
 import SEO from "../components/common/SEO";
 
 export default function AboutPage() {
@@ -11,7 +14,15 @@ export default function AboutPage() {
         classification="Education, Technology, Programming"
       />
 
-      <div>About Us!</div>
+      <div className="text-center max-w-4xl mx-auto mb-20">
+        <SectionTitle className="mb-4 lg:text-6xl">
+          From Devs to <GradientText>Devs</GradientText>
+        </SectionTitle>
+        <SectionSubtitle className="mb-6">
+          Techtalks is here to cut through the noise and guide developers with
+          clarity, not clutter.
+        </SectionSubtitle>
+      </div>
     </>
   );
 }
