@@ -3,10 +3,12 @@ import MarqueeBar from "./MarqueeBar";
 import GradientWash from "../common/GradientWash";
 import NavBar from "./NavBar";
 import { Outlet } from "react-router-dom";
+import ChatButton from "../floating/ChatButton";
 
 export default function MainLayout() {
   return (
     <>
+      <ChatButton />
       <MarqueeBar />
       <GradientWash />
       <NavBar />

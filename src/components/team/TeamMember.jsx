@@ -13,7 +13,7 @@ export default function TeamMember({ teamMember }) {
         <div className="relative h-72 bg-gradient-to-br from-purple-400 to-cyan-400 overflow-hidden">
           <img
             alt={teamMember.name}
-            src={`/src/assets/team/${teamMember.image}.png`}
+            src={`/src/assets/team/${teamMember.image}.webp`}
             className="w-full h-full object-cover"
           />
 

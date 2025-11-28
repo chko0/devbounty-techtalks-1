@@ -13,7 +13,7 @@ export default function CourseItem({ course }) {
       {/* IMAGE */}
       <div className="relative">
         <img
-          src={"src/assets/courses/" + course.image + ".webp"}
+          src={`src/assets/courses/${course.image}.webp`}
           alt={course.title}
           className="w-full sm:h-64 object-cover"
           loading="lazy"
