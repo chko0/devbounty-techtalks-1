@@ -16,11 +16,11 @@ export default function FreeAccessAd() {
           >
             100% Free Access
           </Badge>
-          <div className="text-6xl font-bold text-white leading-tight mb-6">
+          <div className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-10">
             Exclusive <GradientText>Workshops</GradientText> &{" "}
             <GradientText>Webinars</GradientText>
           </div>
-          <p className="text-2xl text-gray-200 leading-relaxed mb-12">
+          <p className="text-xl lg:text-2xl text-gray-200 leading-relaxed mb-14">
             We provide you with{" "}
             <GradientText className="font-semibold">
               free workshops and webinars

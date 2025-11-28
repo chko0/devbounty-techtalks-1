@@ -8,32 +8,31 @@ import FadeUp from "../common/FadeUp";
 
 export default function Hero() {
   return (
-    <section className="relative z-0 min-h-screen overflow-hidden">
+    <section className="relative z-0 overflow-hidden min-h-[calc(100vh-9rem)]">
       <div className="absolute inset-0 overflow-hidden z-[0]">
-        {/* <GradientWash /> */}
         <GlowLines />
       </div>
 
       {/* Content goes here */}
-      <div className="relative z-10 grid gap-12 items-center lg:grid-cols-2 px-6 py-6">
+      <div className="relative z-10 grid gap-12 items-center lg:grid-cols-2 px-16 py-6">
         <div className="space-y-8">
           <p className="tracking-widest text-sm text-cyan-400 font-medium">
             BUILT BY DEVS, FOR DEVS
           </p>
-          <FadeUp delay={0.2}>
+          <FadeUp delay={0.0}>
             <h1 className="text-5xl lg:text-7xl text-white font-bold leading-tight transition-all duration-300">
               Lebanon's <GradientText>Biggest Tech Community</GradientText>
             </h1>
           </FadeUp>
 
-          <FadeUp delay={0.4}>
+          <FadeUp delay={0.2}>
             <p className="text-xl text-gray-300">
               Code smarter, not harder → with the right path and the right
               people.
             </p>
           </FadeUp>
 
-          <FadeUp delay={0.8}>
+          <FadeUp delay={0.4}>
             <div className="flex gap-4 pt-5 flex-col sm:flex-row">
               <Button
                 to="/courses"

@@ -64,8 +64,8 @@ export default function Courses() {
   }, [level, language, sortBy, search]);
 
   return (
-    <section className="px-6 py-16 mb-24">
-      <FadeUp delay={0.2}>
+    <section className="px-6 py-16 mb-30">
+      <FadeUp delay={0.0}>
         <div className="group mx-auto max-w-4xl text-center mb-12">
           <IconText icon={BookOpen} iconClassName="text-cyan-400 w-8 h-8 mr-3">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl text-white font-bold">
@@ -162,7 +162,7 @@ export default function Courses() {
       {filteredCourses.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredCourses.map((course, index) => (
-            <FadeUp key={course.id} delay={index * 0.2}>
+            <FadeUp key={course.id} delay={(index + 1) * 0.2}>
               <CourseItem course={course} />
             </FadeUp>
           ))}

@@ -6,7 +6,7 @@ export default function Introduction() {
     <section className="bg-black px-6 py-16">
       <div className="max-w-5xl mx-auto">
         <FadeUp delay={0.2}>
-          <div className="font-bold mb-16 mt-6 text-5xl text-center text-white">
+          <h1 className="font-bold mb-16 mt-6 text-5xl lg:text-7xl text-center text-white">
             What is
             <div className="relative inline-block">
               <GradientText className="mx-8 relative z-30">
@@ -21,20 +21,44 @@ export default function Introduction() {
               </div>
             </div>
             ?
-          </div>
+          </h1>
         </FadeUp>
 
         <FadeUp delay={0.4} y={30}>
           <p className="text-xl lg:text-2xl px-4 text-center leading-relaxed text-gray-300 mb-16">
-            TechTalks is more than just a learning platform. It's a movement
-            designed to bridge the gap between traditional education and the
-            real-world tech industry. We provide you with the connections to
-            industry professionals, carefully curated courses that cut through
-            the noise, and hands-on events and workshops that accelerate your
-            growth. At TechTalks, you'll discover the clear path in programming
-            that universities often fail to provide, empowering your tech
-            background with practical skills, mentorship, and a community that
-            truly supports your journey from student to professional developer.
+            TechTalks is more than just a learning platform. It's a{" "}
+            <GradientText
+              className="font-semibold"
+              from="purple-400"
+              to="purple-400"
+            >
+              movement designed to bridge the gap
+            </GradientText>{" "}
+            between traditional education and the real-world tech industry. We
+            provide you with the{" "}
+            <GradientText
+              className="font-semibold"
+              from="cyan-400"
+              to="cyan-400"
+            >
+              connections to industry professionals
+            </GradientText>
+            , carefully curated courses that cut through the noise, and{" "}
+            <GradientText
+              className="font-semibold"
+              from="blue-400"
+              to="blue-400"
+            >
+              hands-on events and workshops
+            </GradientText>{" "}
+            that accelerate your growth. At TechTalks, you'll discover the clear
+            path in programming that universities often fail to provide,
+            empowering your tech background with{" "}
+            <GradientText className="font-semibold">
+              practical skills, mentorship, and a community
+            </GradientText>{" "}
+            that truly supports your journey from student to professional
+            developer.
           </p>
         </FadeUp>
       </div>

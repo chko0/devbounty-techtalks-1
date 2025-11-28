@@ -2,7 +2,7 @@ import FadeUp from "../common/FadeUp";
 
 export default function QuoteBlock() {
   return (
-    <section className="bg-black px-6 py-16 mx-auto">
+    <section className="bg-black px-6 py-18 mx-auto">
       <FadeUp delay={0.2}>
         <div className="relative max-w-4xl mx-auto border border-purple-500/25 rounded-xl p-12 bg-gradient-to-r from-purple-900/30 to-cyan-900/30">
           <div className="relative w-full h-full">
@@ -17,7 +17,7 @@ export default function QuoteBlock() {
             </span>
           </div>
           <div className="text-center">
-            <p className="text-3xl italic text-white font-bold leading-relaxed mb-4">
+            <p className="text-2xl lg:text-3xl italic text-white font-bold leading-relaxed mb-4">
               We've been stuck before too. That's why we built this.
             </p>
 

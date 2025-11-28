@@ -5,6 +5,9 @@ import CoursesPage from "./pages/CoursesPage";
 import AboutPage from "./pages/AboutPage";
 import ChampionsPage from "./pages/ChampionsPage";
 import DevBountyPage from "./pages/DevBountyPage";
+import InternshipsPage from "./pages/InternshipsPage";
+import ContactPage from "./pages/ContactPage";
+import TermsPage from "./pages/TermsPage";
 
 function App() {
   return (
@@ -16,6 +19,9 @@ function App() {
           <Route path="about" element={<AboutPage />} />
           <Route path="champions" element={<ChampionsPage />} />
           <Route path="devbounty" element={<DevBountyPage />} />
+          <Route path="internships" element={<InternshipsPage />} />
+          <Route path="contact" element={<ContactPage />} />
+          <Route path="terms" element={<TermsPage />} />
         </Route>
       </Routes>
     </Router>

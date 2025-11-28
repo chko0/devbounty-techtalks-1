@@ -48,13 +48,11 @@ export default function CourseItem({ course }) {
             {course.students}
             {course.students ? "+" : ""}
           </IconText>
-          <IconText
-            icon={course.rating ? Star : null}
-            gap="1"
-            iconClassName="text-yellow-400"
-          >
-            {course.rating}
-          </IconText>
+          {course.rating != null && (
+            <IconText icon={Star} gap="1" iconClassName="text-yellow-400">
+              {course.rating}
+            </IconText>
+          )}
         </div>
 
         {/* BUTTON */}

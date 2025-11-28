@@ -10,11 +10,11 @@ export default function MeetTheTeam() {
     <section className="px-6 py-16">
       <div className="mx-auto max-w-4xl text-center mb-20">
         <IconText icon={Users} iconClassName="text-cyan-400 w-8 h-8 mr-3">
-          <h1 className="text-6xl text-white font-bold">
+          <h1 className="text-5xl lg:text-6xl text-white font-bold">
             Meet Our <GradientText>Team</GradientText>
           </h1>
         </IconText>
-        <p className="text-2xl text-gray-300 mt-6 leading-relaxed">
+        <p className="text-xl lg:text-2xl text-gray-300 mt-6 leading-relaxed">
           The passionate individuals behind TechTalks, dedicated to transforming
           tech education in Lebanon.
         </p>

@@ -17,7 +17,7 @@ export const courses = [
       "Build powerful, modern web applications with Next.js. Learn server-side rendering, API routes, and deployment strategies.",
     image: "NEXTjs_course.png",
     duration: "Coming Soon",
-    rating: 0,
+    rating: null,
     students: 0,
     level: "Beginner",
   },

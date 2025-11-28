@@ -5,14 +5,18 @@ import { twMerge } from "tailwind-merge";
 import IconText from "./IconText"; // import your reusable component
 
 export default function Button({
+  as: Component = "button",
   children,
   className,
+  href,
   to,
   icon: Icon,
   iconColor,
   trailingIcon = false,
   ...props
 }) {
+  if (to) Component = Link;
+
   const baseClasses =
     "group inline-flex items-center gap-2 px-4 py-2 rounded-md font-semibold transition-colors " +
     "text-white bg-blue-600 hover:bg-blue-700";
@@ -37,17 +41,9 @@ export default function Button({
     </IconText>
   );
 
-  if (to) {
-    return (
-      <Link to={to} className={finalClasses} {...props}>
-        {content}
-      </Link>
-    );
-  }
-
   return (
-    <button className={finalClasses} {...props}>
+    <Component to={to} href={href} className={finalClasses} {...props}>
       {content}
-    </button>
+    </Component>
   );
 }

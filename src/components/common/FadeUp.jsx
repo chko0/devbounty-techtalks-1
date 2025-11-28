@@ -14,7 +14,7 @@ export default function FadeUp({
     <motion.div
       initial={{ opacity: 0, x, y, ...motionProps.initial }}
       whileInView={{ opacity: 1, x: 0, y: 0, ...motionProps.whileInView }}
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.2 }}
       transition={{
         duration,
         delay,

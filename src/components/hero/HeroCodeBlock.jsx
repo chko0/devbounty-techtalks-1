@@ -5,20 +5,20 @@ export default function HeroCodeBlock() {
   return (
     <>
       <FadeUp
-        delay={1.0}
+        delay={0.6}
         x={25}
         y={0}
-        motionProps={{
-          initial: { rotateX: 5, rotateY: -15, perspective: 1200 },
-          whileInView: { rotateX: 5, rotateY: -15, perspective: 1200 },
-        }}
+        // motionProps={{
+        //   initial: { rotateY: -15, rotateX: 5, perspective: 1200 },
+        //   whileInView: { rotateY: -15, rotateX: 5, perspective: 1200 },
+        // }}
         className="relative transform"
       >
         <div
           className="relative transform"
-          // style={{
-          //   transform: "perspective(1200px) rotateX(5deg) rotateY(-15deg)",
-          // }}
+          style={{
+            transform: "perspective(1200px) rotateX(5deg) rotateY(-15deg)",
+          }}
           // initial={{
           //   perspective: "1200px",
           //   rotateX: "5deg",
