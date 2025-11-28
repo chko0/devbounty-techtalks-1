@@ -9,6 +9,7 @@ import InternshipsPage from "./pages/InternshipsPage";
 import ContactPage from "./pages/ContactPage";
 import TermsPage from "./pages/TermsPage";
 import ScrollToTop from "./components/common/ScrollToTop";
+import NotFoundPage from "./pages/NotFoundPage";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
             <Route path="internships" element={<InternshipsPage />} />
             <Route path="contact" element={<ContactPage />} />
             <Route path="terms" element={<TermsPage />} />
+            <Route path="*" element={<NotFoundPage />} />
           </Route>
         </Routes>
       </Router>

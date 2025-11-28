@@ -4,26 +4,12 @@ import FadeUp from "../common/FadeUp";
 export default function HeroCodeBlock() {
   return (
     <>
-      <FadeUp
-        delay={0.6}
-        x={25}
-        y={0}
-        // motionProps={{
-        //   initial: { rotateY: -15, rotateX: 5, perspective: 1200 },
-        //   whileInView: { rotateY: -15, rotateX: 5, perspective: 1200 },
-        // }}
-        className="relative transform"
-      >
+      <FadeUp delay={0.6} x={25} y={0} className="relative transform">
         <div
           className="relative transform"
           style={{
             transform: "perspective(1200px) rotateX(5deg) rotateY(-15deg)",
           }}
-          // initial={{
-          //   perspective: "1200px",
-          //   rotateX: "5deg",
-          //   rotateY: "-15deg",
-          // }}
         >
           <div className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-md p-5 mb-4 border border-gray-700">
             <div className="bg-black rounded-lg p-4 mb-4">
