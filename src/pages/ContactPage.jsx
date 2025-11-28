@@ -13,7 +13,7 @@ export default function ContactPage() {
           Let's <GradientText>Talk</GradientText>
         </SectionTitle>
         <SectionSubtitle className="mb-6">
-          Whether you've got a question, feedback, or partnership idea , we'd
+          Whether you've got a question, feedback, or partnership idea, we'd
           love to hear from you!
         </SectionSubtitle>
       </div>

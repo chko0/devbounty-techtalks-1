@@ -65,7 +65,7 @@ export default function Courses() {
   }, [level, language, sortBy, search]);
 
   return (
-    <section className="px-6 py-16 mb-30">
+    <section className="px-6 py-16">
       <FadeUp delay={0.0}>
         <div className="group mx-auto max-w-4xl text-center mb-12">
           <IconText icon={BookOpen} iconClassName="text-cyan-400 w-8 h-8 mr-3">

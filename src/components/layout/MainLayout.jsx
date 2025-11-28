@@ -14,7 +14,7 @@ export default function MainLayout() {
       <MarqueeBar />
       <GradientWash />
       <NavBar />
-      <main className="z-0 relative top-24 min-h-screen flex flex-col overflow-hidden">
+      <main className="z-0 relative top-24 min-h-screen flex flex-col overflow-hidden mb-30">
         <Outlet />
       </main>
       <Footer />
