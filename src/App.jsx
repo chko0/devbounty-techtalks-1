@@ -8,23 +8,28 @@ import DevBountyPage from "./pages/DevBountyPage";
 import InternshipsPage from "./pages/InternshipsPage";
 import ContactPage from "./pages/ContactPage";
 import TermsPage from "./pages/TermsPage";
+import ScrollToTop from "./components/common/ScrollToTop";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<MainLayout />}>
-          <Route index element={<HomePage />} />
-          <Route path="courses" element={<CoursesPage />} />
-          <Route path="about" element={<AboutPage />} />
-          <Route path="champions" element={<ChampionsPage />} />
-          <Route path="devbounty" element={<DevBountyPage />} />
-          <Route path="internships" element={<InternshipsPage />} />
-          <Route path="contact" element={<ContactPage />} />
-          <Route path="terms" element={<TermsPage />} />
-        </Route>
-      </Routes>
-    </Router>
+    <>
+      <Router>
+        <ScrollToTop />
+
+        <Routes>
+          <Route path="/" element={<MainLayout />}>
+            <Route index element={<HomePage />} />
+            <Route path="courses" element={<CoursesPage />} />
+            <Route path="about" element={<AboutPage />} />
+            <Route path="champions" element={<ChampionsPage />} />
+            <Route path="devbounty" element={<DevBountyPage />} />
+            <Route path="internships" element={<InternshipsPage />} />
+            <Route path="contact" element={<ContactPage />} />
+            <Route path="terms" element={<TermsPage />} />
+          </Route>
+        </Routes>
+      </Router>
+    </>
   );
 }
 

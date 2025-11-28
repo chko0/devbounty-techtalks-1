@@ -31,7 +31,7 @@ export const marqueeItems = [
   <Button
     icon={TrendingUp}
     className="rounded-lg h-9 bg-gradient-to-r from-purple-500 to-cyan-500 hover:from-purple-600 hover:to-cyan-600 hover:scale-105 transition-all duration-200"
-    to="/shop"
+    to="https://shop.techtalkslb.com"
   >
     <span className="font-bold">Shop Now</span>
   </Button>,
