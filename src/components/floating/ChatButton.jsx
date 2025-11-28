@@ -20,16 +20,16 @@ export default function ChatButton() {
         rel="noopener noreferrer"
         aria-label="Chat with us on WhatsApp"
         className="relative flex items-center justify-center w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-gradient-to-r from-green-500 to-green-600
-          hover:from-green-400 hover:to-green-500 transition-all duration-300 hover:scale-105 hover:shadow-xl text-white"
+          hover:from-green-400 hover:to-green-500 transition-all duration-300 hover:scale-105 hover:shadow-xl text-white z-1"
       >
         <MessageCircle className="w-6 h-6 transition-transform duration-300 group-hover:scale-110" />
-
-        {/* Outer Ping */}
-        <div className="absolute inset-0 rounded-full bg-green-400 opacity-40 animate-ping" />
       </Button>
 
+      {/* Outer Ping */}
+      <div className="absolute inset-0 rounded-full bg-green-400 opacity-40 animate-ping" />
+
       {/* Online indicator */}
-      <div className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-green-400 border-2 border-white animate-pulse" />
+      <div className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-green-400 border-2 border-white animate-pulse z-2" />
     </div>
   );
 }
