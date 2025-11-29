@@ -1,6 +1,7 @@
 import { Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 import GradientText from "../common/GradientText";
+import chadi from "../../assets/profile/chadi_kouzayha.webp";
 
 export default function RecreatorCredit() {
   return (
@@ -13,7 +14,7 @@ export default function RecreatorCredit() {
         aria-label="Recreated by Chadi Kouzayha"
       >
         <img
-          src="/src/assets/profile/chadi_kouzayha.webp"
+          src={chadi}
           alt="Your Name"
           className="w-6 h-6 rounded-full border-2 border-cyan-400 group-hover:border-purple-400 transition-colors duration-300"
         />

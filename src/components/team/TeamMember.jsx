@@ -1,5 +1,4 @@
 import { Linkedin } from "lucide-react";
-import { Link } from "react-router-dom";
 import Badge from "../common/Badge";
 
 export default function TeamMember({ teamMember }) {
@@ -13,8 +12,9 @@ export default function TeamMember({ teamMember }) {
         <div className="relative h-72 overflow-hidden">
           <img
             alt={teamMember.name}
-            src={`/src/assets/team/${teamMember.image}.webp`}
+            src={teamMember.image}
             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            loading="lazy"
           />
 
           {/* Purple/Cyan subtle overlay on hover */}
