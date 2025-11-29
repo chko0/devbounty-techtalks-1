@@ -5,7 +5,7 @@ import GradientText from "../common/GradientText";
 import SearchInput from "../common/SearchInput";
 import { BookOpen, SlidersHorizontal } from "lucide-react";
 import { courses } from "../../data/courses";
-import CourseItem from "../course/courseItem";
+import CourseItem from "../course/CourseItem";
 import IconText from "../common/IconText";
 import NoCoursesFound from "../course/NoCoursesFound";
 import FadeUp from "../common/FadeUp";
