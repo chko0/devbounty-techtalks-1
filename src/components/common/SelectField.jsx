@@ -1,4 +1,5 @@
 import { ChevronDown } from "lucide-react";
+import { useId } from "react";
 
 export default function SelectField({
   label,
@@ -6,11 +7,18 @@ export default function SelectField({
   onChange,
   options = [],
   className = "",
+  id,
 }) {
+  const generatedId = useId();
+  const selectId = id || `select-${generatedId}`;
+
   return (
     <div className={`w-full relative ${className}`}>
       {label && (
-        <label className="block text-sm font-medium text-gray-200 mb-2 tracking-wide">
+        <label
+          htmlFor={selectId}
+          className="block text-sm font-medium text-gray-200 mb-2 tracking-wide"
+        >
           {label}
         </label>
       )}
@@ -20,6 +28,7 @@ export default function SelectField({
         <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none z-1" />
 
         <select
+          id={selectId}
           value={value}
           onChange={(e) => onChange(e.target.value)}
           className="w-full px-4 py-3 pr-10 rounded-lg appearance-none bg-gray-800/60 border border-gray-700/70 text-gray-100

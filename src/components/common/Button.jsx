@@ -13,6 +13,7 @@ export default function Button({
   icon: Icon,
   iconColor,
   trailingIcon = false,
+  "aria-label": ariaLabel,
   ...props
 }) {
   if (to) Component = Link;
@@ -22,6 +23,8 @@ export default function Button({
     "text-white bg-blue-600 hover:bg-blue-700";
 
   const finalClasses = twMerge(clsx(baseClasses, className));
+
+  const accessibilityLabel = children ? undefined : ariaLabel;
 
   const content = (
     <IconText
@@ -42,7 +45,13 @@ export default function Button({
   );
 
   return (
-    <Component to={to} href={href} className={finalClasses} {...props}>
+    <Component
+      to={to}
+      href={href}
+      className={finalClasses}
+      aria-label={accessibilityLabel}
+      {...props}
+    >
       {content}
     </Component>
   );

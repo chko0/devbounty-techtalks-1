@@ -30,9 +30,9 @@ export default function CourseItem({ course }) {
       {/* CONTENT */}
       <div className="p-4 sm:p-6">
         {/* TITLE */}
-        <h3 className=" text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 line-clamp-2 group-hover:text-cyan-400 transition-colors">
+        <div className=" text-lg sm:text-xl font-bold text-white mb-2 sm:mb-3 line-clamp-2 group-hover:text-cyan-400 transition-colors">
           {course.title}
-        </h3>
+        </div>
 
         {/* DESCRIPTION */}
         <p className="text-gray-300 text-sm mb-3 sm:mb-4 leading-relaxed line-clamp-2">
