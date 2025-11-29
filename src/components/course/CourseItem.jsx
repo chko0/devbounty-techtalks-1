@@ -17,6 +17,8 @@ export default function CourseItem({ course }) {
           alt={course.title}
           className="w-full sm:h-64 object-cover"
           loading="lazy"
+          width="500"
+          height="320"
         />
 
         {/* DIFFICULTY BADGE */}
