@@ -13,14 +13,12 @@ export default function Tooltip({
     const tooltip = tooltipRef.current;
     if (!tooltip) return;
 
-    // Reset previous shifts so measurement is accurate
     tooltip.style.transform = "";
     tooltip.style.left = "";
     tooltip.style.top = "";
 
     const rect = tooltip.getBoundingClientRect();
 
-    // How far the tooltip should stay away from the edges
     const edgeMargin = 16; // visually cleaner
     const smoothOffset = 6; // extra breathing space
 

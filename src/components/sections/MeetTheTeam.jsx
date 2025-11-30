@@ -10,17 +10,10 @@ export default function MeetTheTeam() {
   return (
     <section className="px-6 py-16">
       <div className="mx-auto max-w-4xl text-center mb-20">
-        {/* <IconText
-          icon={Users}
-          iconClassName="text-cyan-400 w-8 h-8 mr-3"
-          className="flex-col sm:flex-row"
-        >
-          <h1 className="text-5xl lg:text-6xl text-white font-bold"> */}
         <SectionTitle icon={Users}>
           Meet Our <GradientText>Team</GradientText>
         </SectionTitle>
-        {/* </h1>
-        </IconText> */}
+
         <FadeUp delay={0.2}>
           <p className="text-xl lg:text-2xl text-gray-300 mt-6 leading-relaxed">
             The passionate individuals behind TechTalks, dedicated to

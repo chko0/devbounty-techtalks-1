@@ -13,7 +13,7 @@ export default function Introduction() {
               TechTalks
             </GradientText>
 
-            {/* Circular orbit with gradient border */}
+            {/* Circular effect with gradient border */}
             <div className="absolute top-1/2 left-1/2 w-[88.5%] h-[115%] rounded-full pointer-events-none">
               <div className="w-full h-full rounded-full bg-gradient-to-r from-purple-500 via-cyan-400 to-blue-500 p-1 lg:p-1.5 transform -translate-x-[50%] -translate-y-[50%]">
                 <div className="w-full h-full rounded-full bg-black" />

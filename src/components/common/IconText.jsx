@@ -20,14 +20,7 @@ export default function IconText({
       )}
       {...props}
     >
-      {Icon && (
-        <Icon
-          className={clsx(
-            `w-${size} h-${size}`,
-            iconClassName // optional additional classes for icon
-          )}
-        />
-      )}
+      {Icon && <Icon className={clsx(`w-${size} h-${size}`, iconClassName)} />}
       <>{children}</>
     </div>
   );

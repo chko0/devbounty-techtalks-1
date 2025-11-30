@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { ChevronRight } from "lucide-react";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
-import IconText from "./IconText"; // import your reusable component
+import IconText from "./IconText";
 
 export default function Button({
   as: Component = "button",

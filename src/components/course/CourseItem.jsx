@@ -1,8 +1,7 @@
+import { Clock, Users, Star, Play } from "lucide-react";
 import Badge from "../common/Badge";
 import IconText from "../common/IconText";
 import Button from "../common/Button";
-
-import { Clock, Users, Star, Play } from "lucide-react";
 
 export default function CourseItem({ course }) {
   return (

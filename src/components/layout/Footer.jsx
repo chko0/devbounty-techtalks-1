@@ -16,14 +16,19 @@ import { Link } from "react-router-dom";
 import Button from "../common/Button";
 import clsx from "clsx";
 
-function SocialButton({ href, icon: Icon, gradientClasses, label }) {
+function SocialButton({
+  href,
+  icon: Icon,
+  gradientClasses,
+  "aria-label": ariaLabel,
+}) {
   return (
     <Button
       as="a"
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label={label}
+      aria-label={ariaLabel}
       className={clsx(
         "w-8 h-8 flex items-center justify-center rounded-xl transition-all duration-300 hover:scale-110 hover:shadow-lg hover:cursor-pointer text-white",
         gradientClasses
@@ -104,17 +109,20 @@ export default function Footer() {
             <SocialButton
               href="https://www.instagram.com/techtalks.lb/"
               icon={Instagram}
+              aria-label="Follow us on Instagram"
               gradientClasses="bg-gradient-to-br from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600"
               label="Instagram"
             />
             <SocialButton
               href="https://www.linkedin.com/company/techtalks-lb/"
               icon={Linkedin}
+              aria-label="Follow us on LinkedIn"
               gradientClasses="bg-gradient-to-br from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700"
               label="LinkedIn"
             />
             <SocialButton
               href="mailto:techtalks.lb@gmail.com"
+              aria-label="Send us an email"
               icon={Mail}
               gradientClasses="bg-gradient-to-br from-red-500 to-red-600 hover:from-red-600 hover:to-red-700"
               label="Mail"

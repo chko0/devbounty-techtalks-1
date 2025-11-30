@@ -18,10 +18,10 @@ export default function SectionTitle({
       >
         <IconText
           icon={Icon}
-          iconClassName={clsx("text-cyan-400 w-8 h-8 mr-2", iconClassName)}
+          iconClassName={clsx("text-cyan-400 w-8 h-8 sm:mr-2", iconClassName)}
           className="flex-col sm:flex-row items-center gap-2"
         >
-          <div className="">{children}</div>
+          <div>{children}</div>
         </IconText>
       </div>
     </FadeUp>

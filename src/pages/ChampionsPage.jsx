@@ -2,7 +2,6 @@ import GradientText from "../components/common/GradientText";
 import SectionSubtitle from "../components/common/SectionSubtitle";
 import SectionTitle from "../components/common/SectionTitle";
 import SEO from "../components/common/SEO";
-import IconText from "../components/common/IconText";
 import { Trophy } from "lucide-react";
 
 export default function ChampionsPage() {

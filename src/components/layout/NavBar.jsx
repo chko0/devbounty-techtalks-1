@@ -76,6 +76,8 @@ export default function NavBar() {
         {/* Hamburger button - mobile */}
         <button
           className="md:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-cyan-400"
+          aria-label={isOpen ? "Close main menu" : "Open main menu"}
+          aria-expanded={isOpen}
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? (

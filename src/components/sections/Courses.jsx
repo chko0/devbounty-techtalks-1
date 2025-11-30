@@ -51,7 +51,7 @@ export default function Courses() {
       .sort((a, b) => {
         switch (sortBy) {
           case "newest":
-            return b.id - a.id; // assuming higher ID = newer
+            return b.id - a.id;
           case "rated":
             return b.rating - a.rating;
           case "popular":
@@ -70,7 +70,7 @@ export default function Courses() {
         <SectionTitle
           icon={BookOpen}
           className="text-3xl sm:text-4xl lg:text-5xl"
-          iconClassName="text-cyan-400 w-8 h-8 mr-3"
+          iconClassName="text-cyan-400"
         >
           All TechTalks <GradientText>Courses</GradientText>
         </SectionTitle>
