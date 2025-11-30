@@ -3,8 +3,6 @@
 This repository contains a **recreation of the TechTalks landing page** for the current DevBounty challenge.  
 The goal was to build a **pixel-perfect, responsive landing page** that demonstrates modern front-end development skills, component reusability, and smooth animations.
 
----
-
 ## Table of Contents
 
 1. [Introduction](#introduction)
@@ -64,18 +62,19 @@ _All other pages are functional and can be added easily thanks to React Router._
 
 ## Pages & Routes
 
-Implemented pages:
+The website includes the following routes:
 
-- `/` – Homepage
-- `/courses` – Courses
-- `/champions` – Champions
-- `/internships` – Internships
-- `/card_game` – Card Game
-- `/about` – About TechTalks
-- `/contact` – Contact
-- `/terms` – Terms & Privacy
+- `/` – **Homepage**
+- `/courses` – **Courses**
+- `/champions` – **Champions**
+- `/internships` – **Internships**
+- `/devbounty` – **DevBounty Challenge**
+- `/about` – **About TechTalks**
+- `/contact` – **Contact**
+- `/terms` – **Terms & Privacy**
+- `*` – **404 / Not Found Page**
 
-_Adding additional pages is straightforward due to reusable components and React Router._
+_All routes are fully functional, and additional pages can be added easily thanks to reusable components and React Router._
 
 ## Reusable Components
 
@@ -109,4 +108,3 @@ It is not affiliated with the original platform and is intended solely as a **de
 **Chadi Kouzayha** – Front-End Developer & Computer Science Student
 
 - [LinkedIn](https://www.linkedin.com/in/chadikouzayha)
-- [Portfolio](https://yourportfolio.com)
