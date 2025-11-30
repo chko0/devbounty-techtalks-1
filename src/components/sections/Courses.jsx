@@ -45,7 +45,8 @@ export default function Courses() {
           language === "all" || course.language === language;
         const matchesSearch =
           search === "" ||
-          course.title.toLowerCase().includes(search.toLowerCase());
+          course.title.toLowerCase().includes(search.toLowerCase()) ||
+          course.description.toLowerCase().includes(search.toLowerCase());
         return matchesLevel && matchesLanguage && matchesSearch;
       })
       .sort((a, b) => {
