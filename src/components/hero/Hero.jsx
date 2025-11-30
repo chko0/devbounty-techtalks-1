@@ -18,9 +18,9 @@ export function HeroCTA({ className = "" }) {
           trailingIcon={true}
           icon={BookOpen}
           className={clsx(
-            "px-8 py-4 rounded-lg text-lg text-white " +
-              "bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-600 hover:to-cyan-500 transition-all transform hover:scale-105 duration-400 " +
-              "hover:shadow-lg hover:shadow-cyan-500/25 ",
+            "px-8 py-4 rounded-lg text-lg text-white",
+            "bg-gradient-to-r from-blue-500 to-cyan-400 hover:from-blue-600 hover:to-cyan-500 transition-all transform hover:scale-105 duration-400",
+            "hover:shadow-lg hover:shadow-cyan-500/25 ",
             className
           )}
         >
@@ -40,19 +40,19 @@ export function HeroCTA({ className = "" }) {
 
 export default function Hero() {
   return (
-    <section className="relative z-0 overflow-hidden min-h-[calc(100vh-9rem)]">
+    <section className="relative z-0 overflow-hidden min-h-[calc(100vh-9rem)] lg:px-10">
       <div className="absolute inset-0 overflow-hidden z-[0]">
         <GlowLines />
       </div>
 
       {/* Content goes here */}
-      <div className="relative z-10 grid gap-12 items-center lg:grid-cols-2 px-16 py-6">
+      <div className="relative z-10 grid gap-12 items-center lg:grid-cols-2 px-6 py-6 mx-auto">
         <div className="space-y-8">
           <p className="tracking-widest text-sm text-cyan-400 font-medium">
             BUILT BY DEVS, FOR DEVS
           </p>
 
-          <SectionTitle>
+          <SectionTitle className="text-left">
             Lebanon's <GradientText>Biggest Tech Community</GradientText>
           </SectionTitle>
 

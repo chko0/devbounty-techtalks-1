@@ -1,4 +1,5 @@
 import FadeUp from "../common/FadeUp";
+import GradientText from "../common/GradientText";
 
 export default function QuoteBlock() {
   return (
@@ -18,12 +19,20 @@ export default function QuoteBlock() {
           </div>
           <div className="text-center">
             <p className="text-2xl lg:text-3xl italic text-white font-bold leading-relaxed mb-4">
-              We've been stuck before too. That's why we built this.
+              We've been stuck before too.{" "}
+              <GradientText>That's why we built this.</GradientText>
             </p>
 
             <p className="text-lg text-gray-200 leading-relaxed">
               Every challenge we faced inspired TechTalks. We're not just
-              teaching code, we're building a movement.
+              teaching code,{" "}
+              <GradientText
+                className="font-semibold"
+                from="purple-400"
+                to="purple-400"
+              >
+                we're building a movement.
+              </GradientText>
             </p>
           </div>
         </div>

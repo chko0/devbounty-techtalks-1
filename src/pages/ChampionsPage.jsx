@@ -17,10 +17,12 @@ export default function ChampionsPage() {
       />
 
       <div className="text-center max-w-4xl mx-auto mb-20">
-        <SectionTitle className="mb-4 lg:text-6xl">
-          <IconText icon={Trophy} iconClassName="text-yellow-400 w-8 h-8 mr-3">
-            Our <GradientText>Champions</GradientText>
-          </IconText>
+        <SectionTitle
+          icon={Trophy}
+          className="mb-4 lg:text-6xl"
+          iconClassName="text-yellow-400"
+        >
+          Our <GradientText>Champions</GradientText>
         </SectionTitle>
         <SectionSubtitle className="mb-6">
           Meet the exceptional interns who are building the future of technology

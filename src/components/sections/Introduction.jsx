@@ -1,28 +1,27 @@
 import FadeUp from "../common/FadeUp";
 import GradientText from "../common/GradientText";
+import SectionTitle from "../common/SectionTitle";
 
 export default function Introduction() {
   return (
     <section className="bg-black px-6 py-16">
       <div className="max-w-5xl mx-auto">
-        <FadeUp delay={0.2}>
-          <h1 className="font-bold mb-16 mt-6 text-5xl lg:text-7xl text-center text-white">
-            What is
-            <div className="relative inline-block">
-              <GradientText className="mx-8 relative z-30">
-                TechTalks
-              </GradientText>
+        <SectionTitle className="mb-16 mt-6 text-center">
+          What is
+          <div className="inline-block relative mt-2 -mx-3 lg:mt-0">
+            <GradientText className="mx-9 my-3 relative z-30">
+              TechTalks
+            </GradientText>
 
-              {/* Circular orbit with gradient border */}
-              <div className="absolute top-1/2 left-1/2 w-[92%] h-[150%] rounded-full pointer-events-none">
-                <div className="w-full h-full rounded-full bg-gradient-to-r from-purple-500 via-cyan-400 to-blue-500 p-1 lg:p-1.5 transform -translate-x-[50%] -translate-y-[50%]">
-                  <div className="w-full h-full rounded-full bg-black" />
-                </div>
+            {/* Circular orbit with gradient border */}
+            <div className="absolute top-1/2 left-1/2 w-[88.5%] h-[115%] rounded-full pointer-events-none">
+              <div className="w-full h-full rounded-full bg-gradient-to-r from-purple-500 via-cyan-400 to-blue-500 p-1 lg:p-1.5 transform -translate-x-[50%] -translate-y-[50%]">
+                <div className="w-full h-full rounded-full bg-black" />
               </div>
             </div>
-            ?
-          </h1>
-        </FadeUp>
+          </div>
+          ?
+        </SectionTitle>
 
         <FadeUp delay={0.4} y={30}>
           <p className="text-xl lg:text-2xl px-4 text-center leading-relaxed text-gray-300 mb-16">

@@ -6,10 +6,10 @@ import SearchInput from "../common/SearchInput";
 import { BookOpen, SlidersHorizontal } from "lucide-react";
 import { courses } from "../../data/courses";
 import CourseItem from "../course/CourseItem";
-import IconText from "../common/IconText";
 import NoCoursesFound from "../course/NoCoursesFound";
 import FadeUp from "../common/FadeUp";
 import SectionSubtitle from "../common/SectionSubtitle";
+import SectionTitle from "../common/SectionTitle";
 
 export default function Courses() {
   const [showFilters, setShowFilters] = useState(false);
@@ -66,22 +66,20 @@ export default function Courses() {
 
   return (
     <section className="px-6 py-16">
-      <FadeUp delay={0.0}>
-        <div className="group mx-auto max-w-4xl text-center mb-12">
-          <IconText icon={BookOpen} iconClassName="text-cyan-400 w-8 h-8 mr-3">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl text-white font-bold">
-              All TechTalks <GradientText>Courses</GradientText>
-            </h1>
-          </IconText>
-          {/* <h1 className="text-6xl text-white font-bold mb-4">
-          All Techtalks <GradientText>Courses</GradientText>
-        </h1> */}
-          <SectionSubtitle className="mt-4">
-            Curated courses for developers and tech enthusiasts, learn at your
-            pace.
-          </SectionSubtitle>
-        </div>
-      </FadeUp>
+      <div className="group mx-auto max-w-4xl text-center mb-12">
+        <SectionTitle
+          icon={BookOpen}
+          className="text-3xl sm:text-4xl lg:text-5xl"
+          iconClassName="text-cyan-400 w-8 h-8 mr-3"
+        >
+          All TechTalks <GradientText>Courses</GradientText>
+        </SectionTitle>
+
+        <SectionSubtitle className="mt-4">
+          Curated courses for developers and tech enthusiasts, learn at your
+          pace.
+        </SectionSubtitle>
+      </div>
 
       <SearchInput
         placeholder="Search courses, instructors, or topics..."

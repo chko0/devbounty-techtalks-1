@@ -3,6 +3,7 @@ import GradientText from "../common/GradientText";
 import StatItem from "../common/StatItem";
 import GradientWash from "../common/GradientWash";
 import FadeUp from "../common/FadeUp";
+import SectionTitle from "../common/SectionTitle";
 
 export default function FreeAccessAd() {
   return (
@@ -16,10 +17,12 @@ export default function FreeAccessAd() {
           >
             100% Free Access
           </Badge>
-          <div className="text-5xl lg:text-7xl font-bold text-white leading-tight mb-10">
+
+          <SectionTitle className="leading-tight mb-10">
             Exclusive <GradientText>Workshops</GradientText> &{" "}
             <GradientText>Webinars</GradientText>
-          </div>
+          </SectionTitle>
+
           <p className="text-xl lg:text-2xl text-gray-200 leading-relaxed mb-14">
             We provide you with{" "}
             <GradientText className="font-semibold">

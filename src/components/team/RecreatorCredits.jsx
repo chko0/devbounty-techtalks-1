@@ -7,8 +7,8 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function RecreatorCredit() {
   const rotatingTexts = [
-    "Aspiring Front-End Developer",
-    "React.js & JavaScript Enthusiast",
+    "Front-End Developer",
+    "React.js & JavaScript",
     "CS Student @ CNAM Tripoli",
     "Problem-Solver & Team Player",
     "Hands-On Project Experience",
@@ -25,7 +25,7 @@ export default function RecreatorCredit() {
   }, []);
 
   return (
-    <div className="fixed bottom-4 left-4 z-50">
+    <div className="fixed bottom-3 left-1.5 z-50">
       <Link
         to="https://www.linkedin.com/in/chadikouzayha"
         target="_blank"
@@ -44,13 +44,13 @@ export default function RecreatorCredit() {
           <div>
             <div className="flex items-center gap-1.5">
               <span className="text-sm text-gray-200 group-hover:text-white font-normal whitespace-nowrap mb-0.25">
-                Recreated by{" "}
+                By{" "}
                 <GradientText className="font-bold inline">
                   Chadi Kouzayha
                 </GradientText>
               </span>
             </div>
-            <div className="h-4 overflow-hidden relative">
+            <div className="h-4 w-38 overflow-hidden relative">
               <AnimatePresence mode="wait">
                 <motion.span
                   key={index}

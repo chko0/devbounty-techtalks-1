@@ -85,16 +85,18 @@ export default function NavBar() {
           )}
         </button>
       </div>
+
       {/* Mobile menu */}
       <div
-        className={`md:hidden bg-black/30 backdrop-blur-md w-full px-8 py-4 overflow-hidden transition-all duration-300 ease-in-out
+        className={`md:hidden absolute left-0 top-full w-full bg-black/80 z-40
+          backdrop-blur-md shadow-lg overflow-hidden transition-all duration-300 ease-in-out
         ${
           isOpen
             ? "opacity-100 max-h-96 translate-y-0"
-            : "opacity-0 max-h-0 -translate-y-4"
+            : "opacity-0 max-h-0 -translate-y-4 pointer-events-none"
         }`}
       >
-        <nav className="flex flex-col gap-4">
+        <nav className="flex flex-col gap-4 px-8 py-4 ">
           {navLinks.map((link) => (
             <NavLink
               key={link.path}
@@ -116,7 +118,6 @@ export default function NavBar() {
             Start Learning
           </Button>
         </nav>
-        {/* )} */}
       </div>
     </header>
   );

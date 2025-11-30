@@ -4,8 +4,8 @@ import Tooltip from "../common/Tooltip";
 
 export default function ChatButton() {
   return (
-    <div className="fixed bottom-4 right-5 z-40">
-      <Tooltip content="Let's chat!" position="top">
+    <div className="fixed bottom-4 right-4 z-40">
+      <Tooltip content="Need help? Let's chat!" position="top">
         {/* WhatsApp Floating Button */}
         <Button
           as="a"

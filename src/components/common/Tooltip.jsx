@@ -1,12 +1,60 @@
+import { useRef, useLayoutEffect } from "react";
 import clsx from "clsx";
 
 export default function Tooltip({
-  children, // Trigger element
-  content, // Tooltip content
-  position = "top", // top, bottom, left, right
+  children,
+  content,
+  position = "top",
   className = "",
 }) {
-  // Position classes
+  const tooltipRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const tooltip = tooltipRef.current;
+    if (!tooltip) return;
+
+    // Reset previous shifts so measurement is accurate
+    tooltip.style.transform = "";
+    tooltip.style.left = "";
+    tooltip.style.top = "";
+
+    const rect = tooltip.getBoundingClientRect();
+
+    // How far the tooltip should stay away from the edges
+    const edgeMargin = 16; // visually cleaner
+    const smoothOffset = 6; // extra breathing space
+
+    let shiftX = 0;
+    let shiftY = 0;
+
+    // ---- Horizontal Overflow ----
+    if (rect.left < edgeMargin) {
+      // shift right
+      shiftX = edgeMargin - rect.left + smoothOffset;
+    }
+
+    if (rect.right > window.innerWidth - edgeMargin) {
+      // shift left
+      shiftX = -(rect.right - (window.innerWidth - edgeMargin)) - smoothOffset;
+    }
+
+    // ---- Vertical Overflow ----
+    if (rect.top < edgeMargin) {
+      // shift down
+      shiftY = edgeMargin - rect.top + smoothOffset;
+    }
+
+    if (rect.bottom > window.innerHeight - edgeMargin) {
+      // shift up
+      shiftY =
+        -(rect.bottom - (window.innerHeight - edgeMargin)) - smoothOffset;
+    }
+
+    if (shiftX !== 0 || shiftY !== 0) {
+      tooltip.style.transform = `translate(${shiftX}px, ${shiftY}px)`;
+    }
+  });
+
   const positionClasses = {
     top: "bottom-full left-1/2 -translate-x-1/2 mb-2",
     bottom: "top-full left-1/2 -translate-x-1/2 mt-2",
@@ -19,6 +67,7 @@ export default function Tooltip({
       {children}
 
       <div
+        ref={tooltipRef}
         className={clsx(
           "absolute z-50 max-w-xs px-3 py-2 text-sm text-white bg-gray-900 border border-gray-700 rounded-lg shadow-lg whitespace-nowrap",
           "opacity-0 translate-y-1 transition-all duration-300 ease-out pointer-events-none",
@@ -26,7 +75,6 @@ export default function Tooltip({
           positionClasses[position],
           className
         )}
-        role="tooltip"
       >
         {content}
       </div>
