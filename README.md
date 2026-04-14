@@ -8,7 +8,7 @@ Designed to showcase **modern frontend practices**, including reusable component
 
 https://devbounty-techtalks-1.pages.dev/
 
-## ⚡ Tech Stack
+## 🛠️ Tech Stack
 
 - React 19.2
 - React Router
@@ -53,14 +53,14 @@ This project emphasizes **modular, reusable components**, ensuring parity and sc
 - Improving responsive design consistency
 - Applying basic SEO practices in React apps
 
-## 🚧 Improvements
+## 💡 Future Improvements
 
 - Add dynamic content (API/backend integration)
 - Expand remaining pages with real content
 - Add testing (unit + integration)
 - Improve accessibility with deeper audits
 
-## ▶️ Getting Started
+## 🚦 Running the Project
 
 To run this project locally:
 
@@ -79,4 +79,4 @@ This project recreates an older version of the TechTalks landing page for a chal
 
 ## 🎥 Preview
 
-[VIDEO HERE]
+https://github.com/user-attachments/assets/5f4b4510-96d9-4615-b562-577fcaabbd61
