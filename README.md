@@ -6,7 +6,7 @@ Designed to showcase **modern frontend practices**, including reusable component
 
 ## 🔗 Live Demo
 
-https://devbounty-techtalks-1.pages.dev/
+https://techtalks-demo.pages.dev/
 
 ## 🛠️ Tech Stack
 
